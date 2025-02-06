@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Records Database</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        input[type="text"], input[type="date"], select {
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        .total {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h2>HEALTH RECORDS DATABASE</h2>
+<h3>DATA INPUT AND LOOKUP INTERFACE</h3>
+
+<form>
+    <table>
+        <thead>
+            <tr>
+                <th>Patient Name</th>
+                <th>Age Group</th>
+                <th>Gender</th>
+                <th>Allergies to Medication</th>
+                <th>Treatment History</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="text" name="patient_name" value="Mokhotsi Matsela"></td>
+                <td><input type="text" name="age_group" value="35-45"></td>
+                <td>
+                    <select name="gender">
+                        <option value="Male" selected>Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </td>
+                <td><input type="text" name="allergies" value="None"></td>
+                <td><input type="text" name="treatment_history" value="HTN/DM"></td>
+                <td><input type="date" name="date" value="2025-02-06"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Position</th>
+                <th>Company</th>
+                <th>Locality</th>
+                <th>Family History</th>
+                <th>Date</th>
+                <th>Condition Treated</th>
+                <th>Prescriber</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="text" name="position" value="Operator"></td>
+                <td><input type="text" name="company" value="LD"></td>
+                <td><input type="text" name="locality" value="Local"></td>
+                <td><input type="text" name="family_history" value="None"></td>
+                <td><input type="date" name="date2" value="2024-12-24"></td>
+                <td><input type="text" name="condition_treated" value="HTN/DM"></td>
+                <td><input type="text" name="prescriber" value="Mathuto Kutoane"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Medicine Description</th>
+                <th>SKU Code</th>
+                <th>Active Batch Numbers</th>
+                <th>Expiry Status</th>
+                <th>Available Stock</th>
+                <th>Unit Price</th>
+                <th>Qty Required</th>
+                <th>Cost</th>
+                <th>Comment</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><input type="text" name="medicine1" value="Metformin Tabs, 500 mg"></td>
+                <td><input type="text" name="sku1" value="METFO-500 mg"></td>
+                <td><input type="text" name="batch1" value="#NAME?"></td>
+                <td><input type="text" name="expiry1" value="Safe"></td>
+                <td><input type="text" name="stock1" value="5203"></td>
+                <td><input type="text" name="price1" value="R2,01"></td>
+                <td><input type="text" name="qty1" value="30"></td>
+                <td><input type="text" name="cost1" value="R60,30"></td>
+                <td><input type="text" name="comment1" value="Issue"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><input type="text" name="medicine2" value="Enalapril tabs, 010 mg"></td>
+                <td><input type="text" name="sku2" value="ENALA-010 mg"></td>
+                <td><input type="text" name="batch2" value="#NAME?"></td>
+                <td><input type="text" name="expiry2" value="Expiry Unspecified"></td>
+                <td><input type="text" name="stock2" value="2640"></td>
+                <td><input type="text" name="price2" value="R1,20"></td>
+                <td><input type="text" name="qty2" value="60"></td>
+                <td><input type="text" name="cost2" value="R72,00"></td>
+                <td><input type="text" name="comment2" value="Issue"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><input type="text" name="medicine3" value="Amlodipine, 010 mg"></td>
+                <td><input type="text" name="sku3" value="AMLOD-010 mg"></td>
+                <td><input type="text" name="batch3" value="#NAME?"></td>
+                <td><input type="text" name="expiry3" value="Safe"></td>
+                <td><input type="text" name="stock3" value="3639"></td>
+                <td><input type="text" name="price3" value="R0,16"></td>
+                <td><input type="text" name="qty3" value=""></td>
+                <td><input type="text" name="cost3" value=""></td>
+                <td><input type="text" name="comment3" value=""></td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+
+    <div class="total">
+        Total: <input type="text" name="total" value="R132,30" readonly>
+    </div>
+
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>
